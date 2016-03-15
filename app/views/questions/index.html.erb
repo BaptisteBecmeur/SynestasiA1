@@ -1,2 +1,11 @@
-<h1>Questions#index</h1>
-<p>Find me in app/views/questions/index.html.erb</p>
+<h1 class="text-center">Questions list</h1>
+
+<div class="row">
+  <% @questions.each do |question| %>
+    <%= cl_image_tag(question.picture, :width => 80, :height => 80, class: "img-rounded") %>
+    <%= link_to "Remove", question_path(question) , method: :delete , class: "btn btn-danger btn-block" %>
+  <% end %>
+</div>
+<div class="row">
+  <%= link_to new_answer_question_path(@answer)  %>
+</div>

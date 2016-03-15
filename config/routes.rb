@@ -1,15 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'games/welcome'
-
-  get 'games/congrat'
-
-  get 'games/play'
-
-  get 'games/loose'
-
-  get 'games/check'
-
   devise_for :users
 
   get 'synestesie', to: 'pages#synestesie'
@@ -24,6 +14,13 @@ Rails.application.routes.draw do
     resources :questions, only: [:new, :create, :index, :destroy, :show]
   end
     resources :questions
+
+  get '/play', to: 'games#play'
+  get '/welcome', to: 'games#welcome'
+  post '/check', to: 'games#check'
+  get '/loose', to: 'games#loose'
+  get '/congrat', to: 'games#congrat'
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 

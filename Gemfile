@@ -11,6 +11,7 @@ gem 'redis'
 
 gem 'sass-rails'
 gem 'jquery-rails'
+gem 'turbolinks'
 gem 'uglifier'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
