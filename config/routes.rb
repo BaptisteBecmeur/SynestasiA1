@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
-  get 'tests/welcome'
 
-  get 'tests/play'
+  get 'games/welcome'
 
-  get 'tests/check'
+  get 'games/congrat'
 
-  get 'tests/loose'
+  get 'games/play'
 
-  get 'tests/congrat'
+  get 'games/loose'
+
+  get 'games/check'
 
   devise_for :users
 
@@ -18,6 +19,12 @@ Rails.application.routes.draw do
   get 'legal', to: 'pages#legal'
 
   root to: 'pages#home'
+
+  resources :answers do #drummers
+    resources :questions, only: [:new, :create, :index, :destroy, :show]
+  end
+    resources :questions
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   # Serve websocket cable requests in-process
