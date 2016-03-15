@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'tests/welcome'
+
+  get 'tests/play'
+
+  get 'tests/check'
+
+  get 'tests/loose'
+
+  get 'tests/congrat'
+
   devise_for :users
 
   get 'synestesie', to: 'pages#synestesie'
