@@ -17,6 +17,13 @@ gem 'font-awesome-sass'
 gem 'simple_form', github: 'plataformatec/simple_form'
 gem 'autoprefixer-rails'
 
+gem 'carrierwave'
+gem 'cloudinary'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.1.0'
+end
+
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'
