@@ -15,7 +15,7 @@
     <% @questions.each do |question|  %>
       <div class="form-group">
         <%= cl_image_tag(question.picture, class: "img-responsive img-thumbnail") %>
-        <%= link_to icon('trash') + " Remove Drum", question_path(question) , method: :delete , class: "btn btn-danger btn-block" %>
+        <%= link_to icon('trash') + " Remove question", question_path(question) , method: :delete , class: "btn btn-danger btn-block" %>
       </div>
     <% end %>
   </div>

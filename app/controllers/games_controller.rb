@@ -14,8 +14,9 @@ attr_accessor :lvl
     else
       get_questions
     end
-    @answers = Answer.where.not(id: question.answer_id).limit(2).order("RANDOM()")
-    # @answers << question.answer
+    @answers = Answer.where.not(id: question.answer_id).limit(2).order("RANDOM()").to_a
+    @answer ||= []
+    @answers << question.answer
     @answers = @answers.shuffle
     render 'play'
   end
