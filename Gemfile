@@ -28,7 +28,7 @@ end
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'
-
+  gem 'meta_request'
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'spring'
