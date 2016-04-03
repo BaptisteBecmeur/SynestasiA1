@@ -1,0 +1,5 @@
+<%= simple_form_for [@answer, @question], :html => {:multipart => true} do |f| %>
+  <%= f.input :picture %>
+  <%= f.association :answer %>
+  <%= f.button :submit , class: "btn-info btn-block" %>
+<% end %>

@@ -1,0 +1,5 @@
+<h1 class="text-center"><%= @answer.name %></h1>
+<%= cl_image_tag(@answer.picture,:width => 150, :height => 150,
+             :crop => :thumb, :gravity => :face, :radius => :max )%>
+
+<%= link_to "Edit", edit_answer_path(@answer.id), class: "btn btn-info btn-block"%>

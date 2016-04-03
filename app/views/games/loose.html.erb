@@ -1,0 +1,30 @@
+<h1 class="text-xs-center">Game Over</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3 lvl">
+    <progress class="progress progress-danger animated flash" value="<%= @lvl %>" max="30"><%= @lvl %>%</progress>
+  </div>
+</div>
+
+<h4 class="center"><span class="label label-pill label-danger center animated flash">Level : <%= @lvl %></span></h4>
+<div class="row">
+  <div class="col-md-12">
+    <%= cl_image_tag(@question.picture, width: 500, id: "img-loose", class: "img-thumbnail img-fluid center-block animated hinge") %>
+  </div>
+</div>
+
+<h4 class="center">Good answer : </h4>
+
+<p class="center">
+  <a  target="_blank" href="https://www.google.com/#q=<%= @question.answer.name %>" tabindex="0" class="btn" role="button" data-trigger="manual" data-toggle="popover" title="Asshole !" data-content="Click on my face to learn who I am.">
+  <%= cl_image_tag(@question.answer.picture, :width => 70, :height => 70,
+    :crop => :thumb, :gravity => :face, :radius => :max, :effect => "saturation:-100", class: "img-circle center animated fadeIn") %>
+  </a>
+</p>
+
+<h3 class="center">
+  <%= @question.answer.name %>
+</h3>
+
+<div class="center">
+  <%= link_to icon('reply') + " Retry", '/play', class: "btn btn-danger animated flash" %>
+</div>

@@ -1,0 +1,34 @@
+// Place all the styles related to the games controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background-color: #373A3C;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+h1, h2, h3 {
+  font-weight: 800;
+}
+.display-3 {
+  font-weight: 800;
+}
+a, a:hover {
+  color: white;
+  text-decoration: none;
+}
+.center {
+  text-align: center;
+}
+.lvl {
+  margin-top: 1rem;
+}
+.mt {
+  margin-top: 15%;
+}
+.btn-drummer {
+  padding: 0.2rem;
+}
+.popover-content, .popover-title {
+color: #373A3C;
+}
